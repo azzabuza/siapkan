@@ -1,0 +1,504 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIAPKAN.COM - Domain Premium untuk Brand Serius</title>
+  <meta name="description" content="SIAPKAN.COM adalah domain premium yang unik, ringkas, dan mudah diingat. Cocok untuk startup, instansi pendidikan, pemerintah, HR, event, logistik, dan platform digital nasional." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f4efe6;
+      --paper: #fffdf8;
+      --ink: #142327;
+      --muted: #5f6f73;
+      --brand: #b64926;
+      --brand-dark: #8f3216;
+      --accent: #ffd083;
+      --line: #dfd3c2;
+      --ok: #235c41;
+      --radius-lg: 24px;
+      --radius-md: 16px;
+      --shadow: 0 18px 50px rgba(20, 35, 39, 0.11);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 10%, #fff7ea 0%, transparent 40%),
+        radial-gradient(circle at 90% 15%, #ffe8c2 0%, transparent 32%),
+        linear-gradient(160deg, #f3ede3 0%, #f7f3eb 48%, #f3e8d9 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .grain {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.08;
+      background-image: radial-gradient(#000 0.4px, transparent 0.4px);
+      background-size: 5px 5px;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 2.2rem));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      padding: 1.15rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(7px);
+      background: rgba(244, 239, 230, 0.8);
+      border-bottom: 1px solid rgba(143, 50, 22, 0.12);
+    }
+
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .brand {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 1.05rem;
+      color: var(--ink);
+    }
+
+    .chip {
+      border: 1px solid rgba(182, 73, 38, 0.32);
+      background: rgba(255, 255, 255, 0.68);
+      color: var(--brand-dark);
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .hero {
+      padding: clamp(3rem, 8vw, 6.5rem) 0 2.8rem;
+      display: grid;
+      grid-template-columns: 1.25fr 0.95fr;
+      gap: 1.7rem;
+      align-items: stretch;
+    }
+
+    .hero-left,
+    .hero-right {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: clamp(1.2rem, 2.5vw, 2rem);
+      animation: rise 0.7s ease both;
+    }
+
+    .hero-right {
+      animation-delay: 0.12s;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      background: #fff4dc;
+      color: var(--brand-dark);
+      border: 1px solid #f2ce95;
+      font-size: 0.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    h1 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 6vw, 4rem);
+      line-height: 1.07;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      max-width: 16ch;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 60ch;
+      margin-bottom: 1.4rem;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .btn {
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 0.82rem 1.1rem;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--brand);
+      color: #fff;
+      box-shadow: 0 8px 18px rgba(182, 73, 38, 0.28);
+    }
+
+    .btn-secondary {
+      background: #fff8ec;
+      color: var(--brand-dark);
+      border: 1px solid #f2cd96;
+    }
+
+    .price-card {
+      display: grid;
+      gap: 1rem;
+      align-content: start;
+      height: 100%;
+      background: linear-gradient(155deg, #fff 0%, #fff8e9 100%);
+    }
+
+    .price-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .price {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1;
+      color: var(--brand-dark);
+    }
+
+    .small {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .list {
+      display: grid;
+      gap: 0.55rem;
+      margin-top: 0.45rem;
+    }
+
+    .list p {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+      color: #304045;
+      font-size: 0.92rem;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 99px;
+      background: var(--ok);
+      margin-top: 0.42rem;
+      flex: 0 0 auto;
+    }
+
+    .section {
+      padding: 1.2rem 0 1.8rem;
+    }
+
+    .section-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.35rem, 4vw, 2rem);
+      line-height: 1.2;
+      margin-bottom: 0.7rem;
+    }
+
+    .section-lead {
+      color: var(--muted);
+      max-width: 70ch;
+      margin-bottom: 1.25rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 0.95rem;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 1rem;
+      box-shadow: 0 10px 26px rgba(20, 35, 39, 0.05);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.91rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 1rem;
+    }
+
+    .signal {
+      display: grid;
+      gap: 0.65rem;
+      margin-top: 0.25rem;
+    }
+
+    .signal p {
+      color: #2f4044;
+      font-size: 0.94rem;
+      padding-left: 0.4rem;
+      border-left: 3px solid #ecc07d;
+    }
+
+    .cta {
+      margin: 1rem 0 3.2rem;
+      background:
+        linear-gradient(130deg, #0f262d 0%, #1d3c45 60%, #254a50 100%);
+      border-radius: var(--radius-lg);
+      color: #f5f1e8;
+      padding: clamp(1.3rem, 3vw, 2rem);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      box-shadow: 0 18px 50px rgba(8, 21, 25, 0.28);
+      display: grid;
+      gap: 1rem;
+      animation: rise 0.72s ease both;
+      animation-delay: 0.24s;
+    }
+
+    .cta h2 {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      line-height: 1.15;
+      max-width: 22ch;
+    }
+
+    .cta p {
+      color: #d4dedf;
+      max-width: 62ch;
+    }
+
+    .cta .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .cta .contact a {
+      color: #fffaf0;
+      text-decoration: none;
+      font-size: 0.94rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 0.62rem 0.85rem;
+      border-radius: 11px;
+    }
+
+    footer {
+      padding: 0 0 1.8rem;
+      color: #596a6e;
+      font-size: 0.82rem;
+      text-align: center;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        max-width: 100%;
+      }
+
+      .topbar {
+        position: static;
+      }
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="container">
+      <div class="brand">SIAPKAN.COM</div>
+      <div class="chip">Domain Premium - Siap Akuisisi</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <article class="hero-left">
+        <span class="eyebrow">Nama kuat untuk brand nasional</span>
+        <h1>Domain unik  SIAPKAN.COM tersedia untuk dibeli sekarang.</h1>
+        <p class="lead">
+          Satu kata Bahasa Indonesia yang tegas, mudah diingat, dan relevan lintas industri.
+          Ideal untuk perusahaan, platform digital, lembaga pendidikan, hingga instansi publik
+          yang ingin identitas online profesional dan kredibel.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#kontak">Ajukan Penawaran</a>
+          <a class="btn btn-secondary" href="#kegunaan">Lihat Kegunaan</a>
+        </div>
+      </article>
+
+      <aside class="hero-right price-card" id="harga">
+        <p class="price-title">Harga Penawaran</p>
+        <p class="price">Rp185.000.000</p>
+        <p class="small">Harga wajar untuk domain .COM premium satu kata. Masih dapat dinegosiasikan untuk transaksi cepat.</p>
+        <div class="list">
+          <p><span class="dot"></span>Transfer domain resmi melalui registrar</p>
+          <p><span class="dot"></span>Bantuan proses migrasi dan serah terima</p>
+          <p><span class="dot"></span>Dokumen kepemilikan transparan</p>
+          <p><span class="dot"></span>Opsional: dukungan setup landing page awal</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="kegunaan">
+      <h2 class="section-title">Cocok digunakan untuk apa saja?</h2>
+      <p class="section-lead">
+        Kata "siapkan" punya makna aksi, kesiapan, dan eksekusi. Ini membuat SIAPKAN.COM fleksibel
+        untuk banyak model bisnis dan kampanye institusi.
+      </p>
+      <div class="grid">
+        <article class="card">
+          <h3>Platform Rekrutmen</h3>
+          <p>Portal karier, pelatihan kerja, dan onboarding kandidat.</p>
+        </article>
+        <article class="card">
+          <h3>Edutech & Lembaga Kursus</h3>
+          <p>Brand untuk persiapan ujian, beasiswa, dan sertifikasi.</p>
+        </article>
+        <article class="card">
+          <h3>Event & Conference</h3>
+          <p>Landing pendaftaran acara, expo, seminar, dan workshop.</p>
+        </article>
+        <article class="card">
+          <h3>Logistik & Supply</h3>
+          <p>Kampanye operasional: siapkan stok, armada, dan distribusi.</p>
+        </article>
+        <article class="card">
+          <h3>GovTech & Layanan Publik</h3>
+          <p>Program sosialisasi kesiapan bencana, kesehatan, atau pemilu.</p>
+        </article>
+        <article class="card">
+          <h3>Fintech & Asuransi</h3>
+          <p>Edukasi literasi keuangan: siapkan dana, proteksi, masa depan.</p>
+        </article>
+        <article class="card">
+          <h3>Konsultan Bisnis</h3>
+          <p>Layanan persiapan ekspansi, audit, legal, dan transformasi digital.</p>
+        </article>
+        <article class="card">
+          <h3>UMKM hingga Enterprise</h3>
+          <p>Sama-sama relevan untuk brand lokal maupun perusahaan besar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section two-col" id="instansi">
+      <article class="card">
+        <h2 class="section-title">Instansi yang paling ideal</h2>
+        <div class="list">
+          <p><span class="dot"></span>Kementerian / dinas dengan program edukasi publik</p>
+          <p><span class="dot"></span>Universitas, sekolah, bimbel, dan lembaga sertifikasi</p>
+          <p><span class="dot"></span>Perusahaan HR, outsourcing, dan talent platform</p>
+          <p><span class="dot"></span>BUMN/BUMD dengan program transformasi SDM</p>
+          <p><span class="dot"></span>Startup aplikasi produktivitas dan pelatihan</p>
+          <p><span class="dot"></span>Yayasan sosial dengan kampanye "siap" masyarakat</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="section-title">Kenapa nilainya tinggi?</h2>
+        <div class="signal">
+          <p>Satu kata, 7 huruf, mudah diucapkan dan diketik.</p>
+          <p>Makna aktif: mendorong tindakan, bukan sekadar slogan.</p>
+          <p>Brandable: bisa dipakai sebagai nama produk, platform, atau gerakan nasional.</p>
+          <p>.COM tetap ekstensi paling dipercaya untuk bisnis serius.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="cta" id="kontak">
+      <h2>Amankan SIAPKAN.COM sebelum jadi milik pihak lain.</h2>
+      <p>
+        Jika Anda sedang membangun brand jangka panjang, domain ini memberi pondasi nama
+        yang solid, singkat, dan kuat secara komunikasi. Hubungi kami untuk negosiasi dan
+        proses pembelian resmi.
+      </p>
+      <div class="contact">
+        <a href="https://wa.me/6285640067363" target="_blank" rel="noopener noreferrer">WhatsApp: 085640067363</a>
+        <a href="mailto:haziraazzafaroni02@gmail.com">Gmail: haziraazzafaroni02@gmail.com</a>
+        <a href="https://instagram.com/azzabuza" target="_blank" rel="noopener noreferrer">Instagram: @azzabuza</a>
+        <a href="https://tiktok.com/@azzabuza" target="_blank" rel="noopener noreferrer">TikTok: @azzabuza</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    SIAPKAN.COM - Domain premium satu kata untuk visi brand yang lebih besar.
+  </footer>
+</body>
+</html>
